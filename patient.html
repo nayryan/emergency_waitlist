@@ -27,6 +27,9 @@
             xhr.open("GET", "get_waiting_info.php?code=" + encodeURIComponent(yourCode), true);
             xhr.send();
         }
+        // Call refreshWaitingInfo() every 5 minutes
+        setInterval(refreshWaitingInfo, 300000); // 300000 milliseconds = 5 minutes
+        window.onload = refreshWaitingInfo;
     </script>
 </body>
 </html>
