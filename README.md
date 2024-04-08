@@ -1,1 +1,33 @@
-ryan
+# Hospital Triage Application
+
+## Overview
+This document provides detailed instructions on how to set up and connect the Hospital Triage application to a database system. The application is built using PHP for server-side scripting, HTML and CSS for the frontend, and PostgreSQL as the database management system.
+
+## Prerequisites
+- XAMPP or any equivalent server stack that includes PHP and PostgreSQL.
+- PostgreSQL or any SQL database service.
+
+## Technologies Used
+- **PHP**: Server-side scripting language.
+- **HTML/CSS**: Frontend presentation.
+- **PostgreSQL**: Database management system.
+- **XAMPP**: Local server stack that can also be used for MySQL databases.
+
+## Installation Steps
+
+### Setting up the Server Environment
+1. Download and install XAMPP from [Apache Friends](https://www.apachefriends.org/index.html).
+2. Start the Apache and PostgreSQL services from the XAMPP control panel.
+
+### Setting up PostgreSQL
+1. Open the PostgreSQL shell from the XAMPP control panel or use `pgAdmin` for a graphical interface.
+2. Create a new database for the application:
+3. Create the necessary tables as defined in the `database.sql` file provided with the project.
+
+### Configuring PHP to Connect to PostgreSQL
+1. In your PHP code, configure the database connection parameters. Replace the MySQL PDO connection string with
+
+
+
+
+
