@@ -8,7 +8,7 @@
 <body>
     <div class="container">
         <h1>Ajouter un Patient</h1>
-        <form id="add-patient-form">
+        <form id="add-patient-form" action="add_patient.php" method="post">
             <div>
                 <label for="name">Nom :</label>
                 <input type="text" id="name" name="name" required>
@@ -20,9 +20,11 @@
             <div>
                 <label for="severity">Gravité :</label>
                 <select id="severity" name="severity" required>
-                    <option value="low">Faible</option>
-                    <option value="medium">Moyenne</option>
-                    <option value="high">Élevée</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
                 </select>
             </div>
             <button type="submit">Ajouter</button>

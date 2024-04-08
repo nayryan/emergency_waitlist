@@ -18,7 +18,13 @@
                 </tr>
             </thead>
             <tbody id="patient-list">
-                <!-- Les lignes du tableau seront ajoutées ici dynamiquement -->
+                <?php
+                // Récupérer et afficher les patients
+                $patients = $db->query("SELECT * FROM patients ORDER BY arrivalTime ASC");
+                foreach ($patients as $patient) {
+                    echo "<tr><td>{$patient['patientName']}</td><td>{$patient['age']}</td><td>{$patient['injurySeverity']}</td><td>Actions</td></tr>";
+                }
+                ?>
             </tbody>
         </table>
         <button onclick="location.href='add-patient.html'">Ajouter un patient</button>
