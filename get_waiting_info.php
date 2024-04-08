@@ -1,5 +1,5 @@
 <?php
-include 'db_config.php'; // Assurez-vous que ce fichier contient les informations de connexion à votre base de données
+include 'db_config.php'; 
 
 $accessCode = $_GET['code'];
 

@@ -27,6 +27,25 @@ This document provides detailed instructions on how to set up and connect the Ho
 ### Configuring PHP to Connect to PostgreSQL
 1. In your PHP code, configure the database connection parameters. Replace the MySQL PDO connection string with
 
+## Utilisation de l'Application
+
+### Pour les Patients
+
+#### Vérifier le Temps d'Attente
+1. Ouvrez votre navigateur et accédez à l'URL de l'application (par exemple, `http://localhost/hospital-triage/code.html`).
+2. Entrez votre code d'accès à trois chiffres dans le champ prévu et cliquez sur "Valider".
+3. Vous serez redirigé vers une page affichant votre temps d'attente estimé ainsi que le nombre de personnes devant vous.
+
+#### Rafraîchir les Informations d'Attente
+- Sur la page d'attente, cliquez sur le bouton "Rafraîchir" pour mettre à jour le temps d'attente et le nombre de personnes devant vous.
+
+### Pour les Administrateurs
+
+#### Ajouter un Nouveau Patient
+1. Accédez à l'URL de l'interface d'administration (par exemple, `http://localhost/hospital-triage/form.html`).
+2. Remplissez le formulaire avec les informations du patient : nom, âge et niveau de gravité.
+3. Cliquez sur "Ajouter" pour enregistrer le patient dans la file d'attente.
+
 
 
 

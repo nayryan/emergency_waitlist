@@ -1,5 +1,5 @@
 <?php
-include 'db_config.php'; // Inclut votre script de configuration de la base de données
+include 'db_config.php'; 
 
 $accessCode = $_POST['access-code'];
 
