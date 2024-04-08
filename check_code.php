@@ -1,14 +1,26 @@
 <?php
-// Connexion à la base de données
-$db = new PDO('mysql:host=localhost;dbname=hospital_triage;charset=utf8', 'username', 'password');
+include 'db_config.php'; // Inclut votre script de configuration de la base de données
 
-// Récupération du code
-$code = $_POST['access-code'];
+$accessCode = $_POST['access-code'];
 
-// Requête pour trouver le patient par code
-$query = $db->prepare("SELECT * FROM patients WHERE code = ?");
-$query->execute([$code]);
-$patient = $query->fetch();
+try {
+    $conn = new PDO("mysql:host=$servername;dbname=myDB", $username, $password);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-echo "Votre temps d'attente estimé est : ...";
+    $stmt = $conn->prepare("SELECT * FROM patients WHERE accessCode = ?");
+    $stmt->execute([$accessCode]);
+
+    $result = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    if($result) {
+        // Redirige le patient vers sa page d'informations d'attente
+        header('Location: patient.html?code='.$accessCode);
+        exit();
+    } else {
+        echo "Code invalide.";
+    }
+} catch(PDOException $e) {
+    echo "Erreur: " . $e->getMessage();
+}
+$conn = null;
 ?>
