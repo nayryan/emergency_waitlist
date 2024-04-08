@@ -46,7 +46,4 @@ This document provides detailed instructions on how to set up and connect the Ho
 3. Cliquez sur "Ajouter" pour enregistrer le patient dans la file d'attente.
 
 
-#### les codes javascript sont dans les fichiers html 
-
-
 

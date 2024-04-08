@@ -6,17 +6,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    // javascript
-    <script>
-        document.getElementById("access-code").addEventListener("input", function() {
-            var pattern = /^\d{3}$/;
-            if(pattern.test(this.value)) {
-                this.style.borderColor = "green";
-            } else {
-                this.style.borderColor = "red";
-            }
-        });
-    </script>
     <div class="container">
         <h1>Entrez votre code</h1>
         <form id="access-code-form" action="check_code.php" method="post">
@@ -27,5 +16,7 @@
             <button type="submit">Valider</button>
         </form>
     </div>
+    <script src="hospitalScripts.js"></script>
+
 </body>
 </html>
